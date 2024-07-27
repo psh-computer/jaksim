@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zindex</title>
+    <style>
+        /* z-index는 position 이 static일때, 사용해도 효과가 없다. */
+        div{border: 3px solid black; height: 100px; width: 100px;}
+        #box1{background-color: aquamarine;}
+        #box2{
+            background-color: orange;
+            margin-top: -30px;
+            margin-left: 20px;
+        }
+        #box3{
+            background-color: aquamarine;
+            position: relative;
+            z-index: 10;
+        }
+        #box4{
+            background-color: orange;
+            margin-top: -20px;
+            margin-left: 30px;
+            position: relative;
+            z-index: 5;
+        } 
+        /* z-index가 음수가 된다면 가장 먼저 그리겠다는 의미 */
+        #box5{
+            background-color: aquamarine;
+
+        }
+        #box6{
+            position: relative;
+            background-color: orange;
+            margin-top: -20px;
+            margin-left: 30px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">BOX1</div>
+    <div id="box2">BOX2</div>
+    <hr>
+    <div id="box3">BOX3</div>
+    <div id="box4">BOX4</div>
+    <hr>
+    <div id="box5">BOX5</div>
+    <div id="box6">BOX6</div>
+
+</body>
+</html>
